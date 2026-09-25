@@ -1,0 +1,576 @@
+/* =========================================================
+   OPERIXA — SERVICE DETAIL PAGE
+   ========================================================= */
+
+.service-detail-page {
+  width: 100%;
+  background: #080d1d;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.service-detail-hero {
+  position: relative;
+
+  width: 100%;
+
+  padding: 175px 0 125px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(83, 109, 254, 0.12),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #0d1325 0%,
+      #080d1d 100%
+    );
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+.service-detail-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+
+  opacity: 0.4;
+
+  pointer-events: none;
+}
+
+.service-detail-hero .container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.section-label {
+  margin: 0 0 18px;
+
+  color: #879bff;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.service-detail-hero h1 {
+  max-width: 950px;
+
+  margin: 0 auto 28px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(3.2rem, 7vw, 5.6rem);
+
+  font-weight: 800;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.service-detail-intro {
+  max-width: 760px;
+
+  margin: 0 auto 38px;
+
+  color: #9ca6bd;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.service-detail-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+}
+
+.service-detail-actions .btn-primary {
+  min-width: 170px;
+
+  color: #0a0e1b;
+
+  background: #ffffff;
+
+  border: 1px solid #ffffff;
+
+  border-radius: 11px;
+
+  padding: 14px 24px;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-detail-actions .btn-primary:hover {
+  transform: translateY(-2px);
+
+  background: #e9ecf3;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.service-detail-actions .btn-secondary {
+  min-width: 170px;
+
+  padding: 14px 24px;
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 11px;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.service-detail-actions .btn-secondary:hover {
+  transform: translateY(-2px);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  border-color:
+    rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   WHAT WE BUILD
+   ========================================================= */
+
+.service-detail-section {
+  padding: 120px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #080d1d,
+      #0d1321
+    );
+}
+
+.service-detail-section .container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.service-section-heading {
+  max-width: 780px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.service-section-heading h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(2.4rem, 5vw, 3.7rem);
+
+  font-weight: 750;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+.service-section-heading > p:last-child {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #98a2b8;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICE GRID
+   ========================================================= */
+
+.service-detail-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.service-detail-card {
+  position: relative;
+
+  min-height: 270px;
+
+  padding: 36px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.075);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-detail-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -75px;
+  top: -75px;
+
+  background:
+    rgba(83, 109, 254, 0.05);
+
+  border-radius: 50%;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(255, 255, 255, 0.15);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  box-shadow:
+    0 26px 55px rgba(0, 0, 0, 0.25);
+}
+
+.service-detail-card > span {
+  display: inline-block;
+
+  margin-bottom: 42px;
+
+  color: #8193ee;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.service-detail-card h3 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-size: 1.45rem;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.02em;
+}
+
+.service-detail-card p {
+  margin: 0;
+
+  color: #939db2;
+
+  font-size: 0.94rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA SECTION
+   ========================================================= */
+
+.service-detail-cta {
+  padding: 0 0 120px;
+
+  background: #0d1321;
+}
+
+.service-detail-cta .container {
+  position: relative;
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+
+  padding: 75px 40px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 26px 65px rgba(0, 0, 0, 0.24);
+}
+
+.service-detail-cta .container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  right: -130px;
+  top: -160px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(83, 109, 254, 0.08);
+}
+
+.service-detail-cta h2 {
+  position: relative;
+
+  max-width: 760px;
+
+  margin: 0 auto 20px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(2.4rem, 5vw, 3.6rem);
+
+  font-weight: 750;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+.service-detail-cta p:not(.section-label) {
+  position: relative;
+
+  max-width: 650px;
+
+  margin: 0 auto 32px;
+
+  color: #9ca6bb;
+
+  line-height: 1.8;
+}
+
+.service-detail-cta .btn-primary {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+
+  padding: 14px 24px;
+
+  color: #0a0e1b;
+
+  background: #ffffff;
+
+  border-radius: 11px;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-detail-cta .btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-hero {
+    padding:
+      145px 0 95px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .service-detail-hero {
+    padding:
+      125px 0 75px;
+  }
+
+  .service-detail-hero h1 {
+    font-size:
+      clamp(2.6rem, 12vw, 3.8rem);
+  }
+
+  .service-detail-actions {
+    flex-direction: column;
+  }
+
+  .service-detail-actions .btn-primary,
+  .service-detail-actions .btn-secondary {
+    width: min(100%, 360px);
+  }
+
+  .service-detail-section {
+    padding: 85px 0;
+  }
+
+  .service-detail-card {
+    min-height: auto;
+
+    padding: 28px;
+  }
+
+  .service-detail-card > span {
+    margin-bottom: 30px;
+  }
+
+  .service-detail-cta {
+    padding-bottom: 85px;
+  }
+
+  .service-detail-cta .container {
+    padding: 55px 24px;
+  }
+}

@@ -1,0 +1,864 @@
+/* =========================================================
+   OPERIXA ROI CALCULATOR
+   Professional two-column design
+   ========================================================= */
+
+.roi-section {
+  width: 100%;
+  padding: 100px 0;
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(76, 104, 255, 0.08),
+      transparent 32%
+    ),
+    #080d1d;
+}
+
+.roi-section .container {
+  width: min(1260px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.roi-section .section-header {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.roi-section .section-tag {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #8da7ff;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.roi-section .section-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.roi-section .section-description {
+  max-width: 650px;
+  margin: 18px auto 0;
+
+  color: #a7b0c4;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN CALCULATOR CONTAINER
+   ========================================================= */
+
+.roi-calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+
+  background: #10182c;
+
+  border: 1px solid #26324c;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   LEFT + RIGHT PANELS
+   ========================================================= */
+
+.roi-input-panel,
+.roi-results-panel {
+  padding: 38px 36px;
+}
+
+.roi-input-panel {
+  background:
+    linear-gradient(
+      145deg,
+      #172137 0%,
+      #111a2e 100%
+    );
+}
+
+.roi-results-panel {
+  background:
+    linear-gradient(
+      145deg,
+      #10182b 0%,
+      #0c1426 100%
+    );
+
+  border-left: 1px solid #26324c;
+}
+
+
+/* =========================================================
+   PANEL HEADINGS
+   ========================================================= */
+
+.roi-panel-heading {
+  position: relative;
+
+  padding-left: 68px;
+  margin-bottom: 35px;
+
+  min-height: 52px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* Icon square */
+
+.roi-panel-heading::before {
+  content: "▦";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #dce5ff;
+
+  font-size: 21px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #27334e,
+      #1b263e
+    );
+
+  border: 1px solid #33415f;
+  border-radius: 11px;
+}
+
+.roi-results-panel .roi-panel-heading::before {
+  content: "▥";
+}
+
+.roi-panel-heading > span {
+  order: 2;
+
+  color: #9da9bf;
+
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.roi-panel-heading h3 {
+  order: 1;
+
+  margin: 0 0 3px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   INPUT GRID
+   ========================================================= */
+
+.roi-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 20px;
+  row-gap: 28px;
+}
+
+
+/* =========================================================
+   INPUT FIELD
+   ========================================================= */
+
+.roi-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.roi-field label {
+  color: #d3daea;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   NORMAL INPUT
+   ========================================================= */
+
+.roi-field > input {
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 0 15px;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  background: #172137;
+
+  border: 1px solid #33405d;
+  border-radius: 9px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.roi-field > input:hover {
+  border-color: #455575;
+}
+
+.roi-field > input:focus {
+  border-color: #6179ff;
+
+  box-shadow:
+    0 0 0 3px rgba(97, 121, 255, 0.12);
+}
+
+
+/* =========================================================
+   INPUT WITH $ / %
+   ========================================================= */
+
+.roi-input-wrap {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  background: #172137;
+
+  border: 1px solid #33405d;
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  transition: 0.2s ease;
+}
+
+.roi-input-wrap:focus-within {
+  border-color: #6179ff;
+
+  box-shadow:
+    0 0 0 3px rgba(97, 121, 255, 0.12);
+}
+
+.roi-input-wrap > span {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c2cadb;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border-right: 1px solid #33405d;
+}
+
+.roi-input-wrap input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+
+  padding: 0 14px;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  background: transparent;
+
+  border: 0;
+  outline: 0;
+}
+
+
+/* percentage */
+
+.roi-percent > span {
+  order: 2;
+
+  border-right: 0;
+  border-left: 1px solid #33405d;
+}
+
+
+/* Remove number input arrows */
+
+.roi-field input::-webkit-inner-spin-button,
+.roi-field input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.roi-field input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+
+/* =========================================================
+   ROI MAIN RESULT
+   ========================================================= */
+
+.roi-main-result {
+  position: relative;
+
+  min-height: 150px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 14px;
+  padding: 26px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1b2741,
+      #151f36
+    );
+
+  border: 1px solid #293752;
+  border-radius: 13px;
+
+  overflow: hidden;
+}
+
+
+/* Blue circular ROI decoration */
+
+.roi-main-result::after {
+  content: "↗";
+
+  position: absolute;
+
+  right: 30px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 86px;
+  height: 86px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6e87ff;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  border: 9px solid #4966ff;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 30px rgba(73, 102, 255, 0.15);
+}
+
+.roi-main-result > span {
+  margin-bottom: 8px;
+
+  color: #9eafff;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.roi-main-result strong {
+  color: #ffffff;
+
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.roi-main-result p {
+  margin: 10px 0 0;
+
+  color: #aab4c8;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RESULT GRID
+   ========================================================= */
+
+.roi-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
+.roi-result-card {
+  position: relative;
+
+  min-height: 75px;
+
+  box-sizing: border-box;
+
+  padding: 15px 18px 15px 54px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #18233b,
+      #141e34
+    );
+
+  border: 1px solid #293650;
+  border-radius: 11px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.roi-result-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #405274;
+}
+
+
+/* small icon circles */
+
+.roi-result-card::before {
+  position: absolute;
+
+  left: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.roi-result-card:nth-child(1)::before {
+  content: "$";
+
+  color: #56e783;
+  background: rgba(50, 210, 100, 0.12);
+  border: 1px solid rgba(50, 210, 100, 0.25);
+}
+
+.roi-result-card:nth-child(2)::before {
+  content: "◷";
+
+  color: #bc75ff;
+  background: rgba(180, 90, 255, 0.12);
+  border: 1px solid rgba(180, 90, 255, 0.25);
+}
+
+.roi-result-card:nth-child(3)::before {
+  content: "◕";
+
+  color: #6688ff;
+  background: rgba(70, 105, 255, 0.12);
+  border: 1px solid rgba(70, 105, 255, 0.25);
+}
+
+.roi-result-card:nth-child(4)::before {
+  content: "▣";
+
+  color: #ffc44d;
+  background: rgba(255, 185, 40, 0.12);
+  border: 1px solid rgba(255, 185, 40, 0.25);
+}
+
+.roi-result-card span {
+  margin-bottom: 4px;
+
+  color: #aab3c5;
+
+  font-size: 13px;
+}
+
+.roi-result-card strong {
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* Colored results */
+
+.roi-result-card:nth-child(1) strong {
+  color: #57e887;
+}
+
+.roi-result-card:nth-child(2) strong {
+  color: #b879ff;
+}
+
+.roi-result-card:nth-child(3) strong {
+  color: #6c8cff;
+}
+
+.roi-result-card:nth-child(4) strong {
+  color: #ffc94e;
+}
+
+
+/* =========================================================
+   PAYBACK
+   ========================================================= */
+
+.roi-payback {
+  position: relative;
+
+  min-height: 58px;
+
+  box-sizing: border-box;
+
+  padding: 0 20px 0 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      145deg,
+      #18233b,
+      #141e34
+    );
+
+  border: 1px solid #293650;
+  border-radius: 11px;
+}
+
+.roi-payback::before {
+  content: "□";
+
+  position: absolute;
+  left: 18px;
+
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6484ff;
+
+  background: rgba(70, 105, 255, 0.12);
+
+  border: 1px solid rgba(70, 105, 255, 0.25);
+  border-radius: 50%;
+}
+
+.roi-payback span {
+  color: #b0b9cb;
+
+  font-size: 13px;
+}
+
+.roi-payback strong {
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.roi-button {
+  width: 100%;
+  min-height: 54px;
+
+  box-sizing: border-box;
+
+  margin-top: 15px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #536dfe,
+      #3455ee
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+
+  box-shadow:
+    0 12px 30px rgba(53, 84, 238, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.roi-button::after {
+  content: "›";
+
+  margin-left: 13px;
+
+  font-size: 24px;
+  line-height: 1;
+}
+
+.roi-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 35px rgba(53, 84, 238, 0.32);
+}
+
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
+.roi-disclaimer {
+  position: relative;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 18px 0 0;
+  padding: 16px 25px 16px 60px;
+
+  color: #9ca7bb;
+
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+
+  background:
+    linear-gradient(
+      145deg,
+      #121c31,
+      #0f182b
+    );
+
+  border: 1px solid #26334c;
+  border-radius: 11px;
+}
+
+.roi-disclaimer::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 24px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #57e887;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  border: 1px solid rgba(87, 232, 135, 0.4);
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .roi-section {
+    padding: 80px 0;
+  }
+
+  .roi-calculator {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-results-panel {
+    border-left: 0;
+    border-top: 1px solid #26324c;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .roi-section {
+    padding: 65px 0;
+  }
+
+  .roi-section .container {
+    width: calc(100% - 28px);
+  }
+
+  .roi-section .section-header {
+    margin-bottom: 35px;
+  }
+
+  .roi-section .section-tag {
+    letter-spacing: 3px;
+  }
+
+  .roi-section .section-title {
+    font-size: 31px;
+  }
+
+  .roi-section .section-description {
+    font-size: 15px;
+  }
+
+  .roi-input-panel,
+  .roi-results-panel {
+    padding: 28px 20px;
+  }
+
+  .roi-fields {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .roi-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-main-result::after {
+    width: 65px;
+    height: 65px;
+
+    right: 20px;
+
+    border-width: 7px;
+
+    font-size: 25px;
+  }
+
+  .roi-main-result strong {
+    font-size: 44px;
+  }
+
+  .roi-payback {
+    gap: 15px;
+  }
+
+  .roi-disclaimer {
+    padding: 16px 18px 16px 50px;
+  }
+
+  .roi-disclaimer::before {
+    left: 17px;
+  }
+}

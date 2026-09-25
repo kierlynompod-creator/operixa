@@ -1,0 +1,198 @@
+/* =========================================
+   SITE-WIDE LAYOUT
+========================================= */
+
+.container {
+  width: min(1200px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main page wrappers */
+
+main {
+  width: 100%;
+}
+
+/* Standard sections */
+
+section {
+  width: 100%;
+}
+
+/* Shared section headings */
+
+.section-header,
+.services-page-header,
+.about-page-header,
+.contact-page-header {
+  width: 100%;
+  max-width: 820px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-description {
+  max-width: 720px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  width: 100%;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1100px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+/* =========================================
+   HOME GRIDS
+========================================= */
+
+.services-grid,
+.why-grid,
+.process-grid,
+.portfolio-grid,
+.testimonials-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-box,
+.services-cta-box,
+.about-cta-box {
+  width: min(1100px, 100%);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-grid,
+.contact-page-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.services-page-content .container {
+  width: min(1200px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-page-grid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-page-content .container {
+  width: min(1200px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-page-content .container {
+  width: min(1200px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   404
+========================================= */
+
+.not-found-content {
+  width: min(760px, calc(100% - 40px));
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer .container {
+  width: min(1200px, calc(100% - 40px));
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 30px, 1200px);
+  }
+
+  .services-page-content .container,
+  .about-page-content .container,
+  .contact-page-content .container,
+  .footer .container {
+    width: min(100% - 30px, 1200px);
+  }
+}

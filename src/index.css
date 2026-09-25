@@ -1,0 +1,33 @@
+/* =========================================
+   OPERIXA - MAIN STYLESHEET
+========================================= */
+
+/* Core */
+@import "./styles/variables.css";
+@import "./styles/global.css";
+@import "./styles/layout.css";
+
+/* Navigation */
+@import "./styles/header.css";
+
+/* Homepage */
+@import "./styles/hero.css";
+@import "./styles/services.css";
+@import "./styles/whychoose.css";
+@import "./styles/process.css";
+@import "./styles/portfolio.css";
+@import "./styles/roi.css";
+@import "./styles/testimonials.css";
+@import "./styles/cta.css";
+@import "./styles/contact.css";
+
+/* Pages */
+@import "./styles/about.css";
+@import "./styles/service-detail.css";
+@import "./styles/audit.css";
+
+/* Footer */
+@import "./styles/footer.css";
+
+/* Responsive - keep last */
+@import "./styles/responsive.css";

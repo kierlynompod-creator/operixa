@@ -1,0 +1,865 @@
+/* =========================================================
+   OPERIXA FREE AUDIT
+========================================================= */
+
+.audit-page {
+  width: 100%;
+  min-height: 100vh;
+
+  color: #ffffff;
+
+  background: #040817;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.audit-hero {
+  position: relative;
+
+  padding: 170px 24px 90px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 72%,
+      rgba(58, 73, 255, 0.2),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #050918 0%,
+      #071023 100%
+    );
+}
+
+.audit-grid-effect {
+  position: absolute;
+
+  left: 50%;
+  bottom: -230px;
+
+  width: 1500px;
+  height: 750px;
+
+  transform:
+    translateX(-50%)
+    perspective(600px)
+    rotateX(67deg);
+
+  transform-origin: bottom center;
+
+  background-image:
+    linear-gradient(
+      rgba(73, 96, 255, 0.14) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(73, 96, 255, 0.14) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+
+  opacity: 0.55;
+
+  pointer-events: none;
+}
+
+.audit-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.audit-badge {
+  display: inline-flex;
+
+  margin-bottom: 28px;
+
+  padding: 10px 18px;
+
+  color: #b2bdff;
+
+  background: rgba(79, 92, 213, 0.11);
+
+  border: 1px solid rgba(100, 105, 255, 0.6);
+
+  border-radius: 999px;
+
+  font-size: 0.73rem;
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+}
+
+.audit-hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+.audit-hero h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #9c69ff,
+      #536dfe
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.audit-hero-copy {
+  max-width: 720px;
+
+  margin: 30px auto 50px;
+
+  color: #adb5c7;
+
+  font-size: 1.02rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.audit-trust-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  text-align: left;
+}
+
+.audit-trust-card {
+  display: flex;
+
+  gap: 16px;
+
+  align-items: center;
+}
+
+.audit-trust-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6079ff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101932,
+      #0a1124
+    );
+
+  border:
+    1px solid rgba(95, 118, 255, 0.38);
+
+  border-radius: 13px;
+
+  font-size: 1.45rem;
+}
+
+.audit-trust-card h3 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 0.93rem;
+}
+
+.audit-trust-card p {
+  margin: 0;
+
+  color: #929caf;
+
+  font-size: 0.78rem;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.audit-content {
+  padding: 0 24px 120px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #071023 0%,
+      #040817 100%
+    );
+}
+
+.audit-content .container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SHELL
+========================================================= */
+
+.audit-shell {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.88fr)
+    minmax(0, 1.12fr);
+
+  gap: 46px;
+
+  padding: 48px;
+
+  background:
+    rgba(5, 11, 26, 0.88);
+
+  border:
+    1px solid rgba(81, 104, 255, 0.48);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.audit-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #6d7fff;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.audit-left > h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+.audit-left-intro {
+  max-width: 430px;
+
+  margin: 0 0 30px;
+
+  color: #9ea7b9;
+
+  font-size: 0.9rem;
+
+  line-height: 1.72;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.audit-benefits {
+  display: grid;
+
+  gap: 12px;
+}
+
+.audit-benefit {
+  position: relative;
+
+  min-height: 112px;
+
+  display: grid;
+
+  grid-template-columns: 58px 1fr;
+
+  gap: 16px;
+
+  align-items: center;
+
+  padding: 22px 20px 22px 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #11192c,
+      #0b1324
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.audit-benefit:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(93, 115, 255, 0.4);
+}
+
+.audit-benefit-number {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  padding: 7px 10px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #815cff,
+      #4969ff
+    );
+
+  border-radius: 11px 0 9px 0;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.audit-benefit-symbol {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #5c79ff;
+
+  background: #0f1932;
+
+  border:
+    1px solid rgba(76, 104, 255, 0.36);
+
+  border-radius: 10px;
+
+  font-size: 1.25rem;
+}
+
+.audit-benefit h3 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 0.96rem;
+}
+
+.audit-benefit p {
+  margin: 0;
+
+  color: #919bad;
+
+  font-size: 0.78rem;
+
+  line-height: 1.58;
+}
+
+
+/* =========================================================
+   GOAL
+========================================================= */
+
+.audit-goal {
+  margin-top: 20px;
+
+  display: flex;
+
+  gap: 18px;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #11182c,
+      #091120
+    );
+
+  border: 1px solid #674dff;
+
+  border-radius: 12px;
+}
+
+.audit-goal-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #9c87ff;
+
+  background: rgba(88, 68, 255, 0.15);
+
+  border-radius: 50%;
+
+  font-size: 1.3rem;
+}
+
+.audit-goal p {
+  margin: 0;
+
+  color: #c5cbda;
+
+  font-size: 0.8rem;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.audit-form {
+  padding: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #121a2e,
+      #0d1425
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 15px;
+}
+
+.audit-form-heading {
+  display: flex;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.audit-form-heading-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #607bff;
+
+  background: rgba(64, 83, 235, 0.18);
+
+  border-radius: 50%;
+
+  font-size: 1.35rem;
+}
+
+.audit-form-heading h2 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 1.5rem;
+}
+
+.audit-form-heading span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #657dff;
+
+  font-size: 0.95rem;
+}
+
+.audit-form-heading p {
+  margin: 0;
+
+  color: #939daf;
+
+  font-size: 0.82rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.audit-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.audit-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-bottom: 17px;
+}
+
+.audit-field label {
+  color: #ffffff;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.audit-field label em {
+  color: #ff4c66;
+
+  font-style: normal;
+}
+
+.audit-field input,
+.audit-field select,
+.audit-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  background: #172034;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.audit-field input,
+.audit-field select {
+  height: 49px;
+
+  padding: 0 14px;
+}
+
+.audit-field textarea {
+  min-height: 120px;
+
+  padding: 14px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.audit-field input::placeholder,
+.audit-field textarea::placeholder {
+  color: #747e92;
+}
+
+.audit-field input:focus,
+.audit-field select:focus,
+.audit-field textarea:focus {
+  border-color: #6077ff;
+
+  box-shadow:
+    0 0 0 3px rgba(96, 119, 255, 0.1);
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.audit-submit {
+  width: 100%;
+
+  min-height: 56px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      90deg,
+      #365af5,
+      #4433eb
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 0.91rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.audit-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 35px rgba(62, 75, 238, 0.32);
+}
+
+.audit-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PRIVACY + STATUS
+========================================================= */
+
+.audit-privacy {
+  margin: 16px 0 0;
+
+  color: #929bac;
+
+  text-align: center;
+
+  font-size: 0.77rem;
+}
+
+.audit-status {
+  margin-top: 16px;
+
+  padding: 13px 15px;
+
+  color: #c4cada;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  font-size: 0.8rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTACT BAR
+========================================================= */
+
+.audit-contact-bar {
+  margin-top: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 25px 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #11192d,
+      #0b1223
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 13px;
+}
+
+.audit-contact-copy {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.audit-contact-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #7085ff;
+
+  background: rgba(78, 96, 255, 0.15);
+
+  border-radius: 50%;
+
+  font-size: 1.35rem;
+}
+
+.audit-contact-copy h3 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+}
+
+.audit-contact-copy p {
+  margin: 0;
+
+  color: #929bad;
+
+  font-size: 0.8rem;
+}
+
+.audit-contact-link {
+  padding: 13px 30px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.26);
+
+  border-radius: 8px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .audit-trust-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 460px;
+  }
+
+  .audit-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .audit-hero {
+    padding:
+      135px 16px 70px;
+  }
+
+  .audit-hero h1 {
+    font-size:
+      clamp(2.6rem, 12vw, 3.8rem);
+  }
+
+  .audit-content {
+    padding:
+      0 14px 85px;
+  }
+
+  .audit-shell {
+    padding: 22px;
+
+    gap: 30px;
+  }
+
+  .audit-form {
+    padding: 22px 18px;
+  }
+
+  .audit-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-contact-bar {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}

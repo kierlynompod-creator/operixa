@@ -1,0 +1,161 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  padding: 85px 0 30px;
+
+  background: #05070d;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr 1fr;
+
+  gap: 55px;
+
+  padding-bottom: 62px;
+}
+
+.footer-brand {
+  max-width: 350px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.footer-logo-mark {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0b0e1c;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  font-weight: 800;
+}
+
+.footer-brand p {
+  color: #7f8798;
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.04em;
+}
+
+.footer-column a,
+.footer-column span {
+  color: #7f8798;
+
+  font-size: 0.86rem;
+
+  transition: color 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  padding-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom p,
+.footer-legal a {
+  color: #626a79;
+
+  font-size: 0.78rem;
+}
+
+.footer-legal {
+  display: flex;
+
+  gap: 22px;
+}
+
+.footer-legal a {
+  transition: color 0.25s ease;
+}
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 950px) {
+  .footer-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 65px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+  }
+}
