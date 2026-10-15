@@ -1,3 +1,4 @@
+
 import { Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header.jsx";
@@ -11,6 +12,11 @@ import ContactPage from "./pages/ContactPage.jsx";
 import FreeAudit from "./pages/FreeAudit.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
+// Legal Pages
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import Terms from "./pages/Terms.jsx";
+
+// Service Pages
 import WebDevelopment from "./pages/services/WebDevelopment.jsx";
 import AISolutions from "./pages/services/AISolutions.jsx";
 import DigitalMarketing from "./pages/services/DigitalMarketing.jsx";
@@ -26,15 +32,25 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<ServicesPage />} />
+
+        <Route
+          path="/services"
+          element={<ServicesPage />}
+        />
+
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+
+        <Route
+          path="/contact"
+          element={<ContactPage />}
+        />
 
         <Route
           path="/free-audit"
           element={<FreeAudit />}
         />
 
+        {/* Service Pages */}
         <Route
           path="/services/web-development"
           element={<WebDevelopment />}
@@ -60,6 +76,18 @@ function App() {
           element={<VirtualAssistant />}
         />
 
+        {/* Legal Pages */}
+        <Route
+          path="/privacy"
+          element={<PrivacyPolicy />}
+        />
+
+        <Route
+          path="/terms"
+          element={<Terms />}
+        />
+
+        {/* 404 Page */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 

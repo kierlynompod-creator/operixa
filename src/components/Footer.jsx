@@ -1,3 +1,4 @@
+
 import { NavLink } from "react-router-dom";
 
 function Footer() {
@@ -56,12 +57,18 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} OPERIXA. All rights reserved.
+            © {new Date().getFullYear()} OPERIXA.
+            All rights reserved.
           </p>
 
           <div className="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <NavLink to="/privacy">
+              Privacy Policy
+            </NavLink>
+
+            <NavLink to="/terms">
+              Terms of Service
+            </NavLink>
           </div>
         </div>
 
