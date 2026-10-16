@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://operixaus.com/sitemap.xml
+Sitemap: https://www.operixaus.com/sitemap.xml
