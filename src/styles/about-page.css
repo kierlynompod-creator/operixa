@@ -495,3 +495,56 @@
     width: 100%;
   }
 }
+
+
+/* =========================================
+   OPERIXA - MEET OUR TEAM
+========================================= */
+
+.about-page .about-team {
+  padding: 65px 0;
+}
+
+/* CMO - centered above the sales team */
+
+.about-page .about-team-leader {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 30px;
+}
+
+/* Two sales representatives below the CMO */
+
+.about-page .about-team-members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Keep all team cards consistent */
+
+.about-page .about-team-leader .about-founder-card,
+.about-page .about-team-members .about-founder-card {
+  height: 100%;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 640px) {
+  .about-page .about-team {
+    padding: 40px 0;
+  }
+
+  .about-page .about-team-leader {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-page .about-team-members {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

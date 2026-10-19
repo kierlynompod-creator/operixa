@@ -1,4 +1,5 @@
 
+
 import { NavLink } from "react-router-dom";
 import SEO from "../components/SEO.jsx";
 
@@ -53,6 +54,27 @@ const founders = [
   },
 ];
 
+const team = [
+  {
+    name: "Donabelle Ursua",
+    role: "CMO",
+    initials: "DU",
+    photo: null,
+  },
+  {
+    name: "Haiehscenth Casas",
+    role: "Sales Development Representative",
+    initials: "HC",
+    photo: null,
+  },
+  {
+    name: "Katrina Zafra",
+    role: "Sales Development Representative",
+    initials: "KZ",
+    photo: null,
+  },
+];
+
 const approach = [
   {
     number: "01",
@@ -80,12 +102,50 @@ const approach = [
   },
 ];
 
+// Reusable profile card for founders and team members
+function ProfileCard({ person, label, type = "Team" }) {
+  return (
+    <article className="about-founder-card">
+      <div className="about-founder-photo">
+        {person.photo ? (
+          <img
+            src={person.photo}
+            alt={person.name}
+            loading="lazy"
+          />
+        ) : (
+          <div className="about-photo-placeholder">
+            <span className="about-founder-initials">
+              {person.initials}
+            </span>
+            <small>{type} Photo Coming Soon</small>
+          </div>
+        )}
+      </div>
+
+      <div className="about-founder-info">
+        <span className="about-founder-label">
+          {label}
+        </span>
+
+        <h3>{person.name}</h3>
+
+        <p className="about-founder-role">
+          {person.role}
+        </p>
+
+        <div className="about-founder-line" />
+      </div>
+    </article>
+  );
+}
+
 function AboutPage() {
   return (
     <>
       <SEO
         title="About Us"
-        description="Meet OPERIXA and its founders, Roger Coon and Kierlyn Ompod. Discover our mission, values, and approach to digital business solutions."
+        description="Learn about OPERIXA, meet our founders and team, and discover our mission, values, and approach to digital business solutions."
         path="/about"
       />
 
@@ -127,10 +187,11 @@ function AboutPage() {
           </div>
         </section>
 
-        {/* OUR STORY */}
+        {/* MAIN CONTENT */}
         <section className="about-page-content">
           <div className="container">
 
+            {/* OUR STORY */}
             <div className="about-page-card about-story-card">
               <div className="about-story-content">
                 <span className="about-page-label">
@@ -138,8 +199,7 @@ function AboutPage() {
                 </span>
 
                 <h2>
-                  Technology Should Make
-                  Business Easier.
+                  Technology Should Make Business Easier.
                 </h2>
 
                 <p>
@@ -167,7 +227,9 @@ function AboutPage() {
                 <div className="about-story-symbol">
                   O
                 </div>
+
                 <span>OPERIXA</span>
+
                 <p>
                   Digital Solutions.
                   <br />
@@ -176,7 +238,7 @@ function AboutPage() {
               </div>
             </div>
 
-            {/* MISSION AND VISION */}
+            {/* MISSION & VISION */}
             <div className="mission-vision-grid">
               <article className="about-page-card">
                 <span className="about-page-label">
@@ -184,8 +246,7 @@ function AboutPage() {
                 </span>
 
                 <h2>
-                  Empowering Businesses
-                  Through Technology
+                  Empowering Businesses Through Technology
                 </h2>
 
                 <p>
@@ -202,8 +263,7 @@ function AboutPage() {
                 </span>
 
                 <h2>
-                  Building Lasting
-                  Digital Partnerships
+                  Building Lasting Digital Partnerships
                 </h2>
 
                 <p>
@@ -215,7 +275,7 @@ function AboutPage() {
               </article>
             </div>
 
-            {/* LEADERSHIP */}
+            {/* FOUNDERS */}
             <section className="about-leadership">
               <div className="about-section-heading">
                 <span className="about-page-label">
@@ -236,43 +296,51 @@ function AboutPage() {
 
               <div className="about-founders-grid">
                 {founders.map((founder) => (
-                  <article
-                    className="about-founder-card"
+                  <ProfileCard
                     key={founder.name}
-                  >
-                    <div className="about-founder-photo">
-                      {founder.photo ? (
-                        <img
-                          src={founder.photo}
-                          alt={founder.name}
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="about-photo-placeholder">
-                          <span className="about-founder-initials">
-                            {founder.initials}
-                          </span>
-                          <small>
-                            Founder Photo Coming Soon
-                          </small>
-                        </div>
-                      )}
-                    </div>
+                    person={founder}
+                    label="OPERIXA LEADERSHIP"
+                    type="Founder"
+                  />
+                ))}
+              </div>
+            </section>
 
-                    <div className="about-founder-info">
-                      <span className="about-founder-label">
-                        OPERIXA LEADERSHIP
-                      </span>
+            {/* OUR TEAM */}
+            <section className="about-team">
+              <div className="about-section-heading">
+                <span className="about-page-label">
+                  OUR TEAM
+                </span>
 
-                      <h3>{founder.name}</h3>
+                <h2>
+                  Meet Our Team
+                </h2>
 
-                      <p className="about-founder-role">
-                        {founder.role}
-                      </p>
+                <p>
+                  Behind OPERIXA is a team committed
+                  to building meaningful connections,
+                  supporting business growth, and
+                  delivering exceptional client experiences.
+                </p>
+              </div>
 
-                      <div className="about-founder-line" />
-                    </div>
-                  </article>
+              {/* CMO - TOP CENTER */}
+              <div className="about-team-leader">
+                <ProfileCard
+                  person={team[0]}
+                  label="MARKETING LEADERSHIP"
+                />
+              </div>
+
+              {/* SALES TEAM - UNDER THE CMO */}
+              <div className="about-team-members">
+                {team.slice(1).map((member) => (
+                  <ProfileCard
+                    key={member.name}
+                    person={member}
+                    label="SALES DEVELOPMENT TEAM"
+                  />
                 ))}
               </div>
             </section>
@@ -299,9 +367,7 @@ function AboutPage() {
                     className="about-reason"
                     key={reason}
                   >
-                    <span aria-hidden="true">
-                      ✓
-                    </span>
+                    <span aria-hidden="true">✓</span>
                     {reason}
                   </div>
                 ))}
@@ -382,7 +448,7 @@ function AboutPage() {
         <section className="about-page-cta">
           <div className="container about-cta-box">
             <span className="section-tag">
-              LET'S BUILD SOMETHING BETTER
+              LET&apos;S BUILD SOMETHING BETTER
             </span>
 
             <h2>
@@ -391,7 +457,7 @@ function AboutPage() {
 
             <p>
               Have an idea, a challenge, or a business
-              goal? Let's explore how OPERIXA can help
+              goal? Let&apos;s explore how OPERIXA can help
               you move forward.
             </p>
 
@@ -400,7 +466,7 @@ function AboutPage() {
                 to="/contact"
                 className="btn"
               >
-                Let's Talk
+                Let&apos;s Talk
               </NavLink>
 
               <NavLink
