@@ -23,6 +23,7 @@
 
 /* Pages */
 @import "./styles/about.css";
+@import "./styles/about-page.css";
 @import "./styles/service-detail.css";
 @import "./styles/audit.css";
 
